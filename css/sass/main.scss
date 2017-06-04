@@ -1,0 +1,21 @@
+@import "variables";
+@import "mixins";
+ 
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+ 
+    @include border-box;
+}
+
+.cg-container,
+.cg-row {
+	@extend %clearfix;
+}
+
+.cg-container {
+	width: 70%;
+	max-width: $grid-max-width;
+}
