@@ -1,0 +1,100 @@
+ 
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+ 
+    @include border-box;
+}
+
+.cg-container {
+	margin: 0 auto;
+	width: 100%;
+	position: relative;
+}
+
+.cg-container,
+.cg-row {
+	@extend %clearfix;
+}
+
+@media #{$mq-small-up} {
+	.cg-container {
+		width: 100%;
+		min-width: 540px;
+	}
+}
+
+@media #{$mq-medium-up} {
+	.cg-container {
+		width: 720px;
+		min-width: 720px;
+	}
+}
+
+@media #{$mq-large-up} {
+	.cg-container {
+		width: 960px;
+		min-width: 960px;
+	}
+}
+
+@media #{$mq-xlarge-up} {
+	.cg-container {
+		width: 1140px;
+	}
+}
+
+.cg-row {
+	width: 100%;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+
+	.cg-col {
+		float: left;
+		@include border-box;
+		padding: 0 $gutter-width;
+		min-height: 1px;
+
+		&[class*="-push-"],
+		&[class*="-pull-"] {
+			position: relative;
+		}
+
+		@for $i from 1 through $grid-columns {
+			$width: unquote((100 / ($grid-columns / $i)) + "%");
+
+			&.sm#{$i} {
+				width: $width;
+				@include auto-offsets;
+			}
+			@include grid-push-pulls($i, "sm", $width);
+		}
+
+		@media #{$mq-medium-up} {
+			@for $i from 1 through $grid-columns {
+				$width: unquote((100 / ($grid-columns / $i)) + "%");
+
+				&.md#{$i} {
+					width: $width;
+					@include auto-offsets;
+				}
+				@include grid-push-pulls($i, "md", $width);
+			}
+		}
+
+		@media #{$mq-large-up} {
+			@for $i from 1 through $grid-columns {
+				$width: unquote((100 / ($grid-columns / $i)) + "%");
+
+				&.lg#{$i} {
+					width: $width;
+					@include auto-offsets;
+				}
+				@include grid-push-pulls($i, "lg", $width);
+			}
+		}
+	}
+}

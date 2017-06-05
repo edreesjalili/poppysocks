@@ -1,8 +1,28 @@
 // grid variables
 $grid-columns: 		12;
 $grid-max-width: 	65em;
+$gutter-width:		.75rem;
 
-// breakpoints
-$breakpoint-small: 	"only screen and (min-width: 20em)";
-$breakpoint-medium: "only screen and (min-width: 30em)";
+// media queries
+$mq-xsmall-down:	"only screen and (max-width: 575px)";
+$mq-small-down:		"only screen and (max-width: 767px)";
+$mq-medium-down:	"only screen and (max-width: 991px)";
+$mq-large-down:		"only screen and (max-width: 1199px)";
+$mq-small-up:		"only screen and (min-width: 576px)";
+$mq-medium-up:		"only screen and (min-width: 768px)";
+$mq-large-up: 		"only screen and (min-width: 992px)";
+$mq-xlarge-up: 		"only screen and (min-width: 1200px)";
 
+// colors
+$primary-bg-color: 	#f8f8f8;
+$grey-color:		#333;
+$red-color:			#ec3440;
+
+// text
+$default-font-family:	Arial, Helvetica, sans-serif;;
+$off-white-text:		#ddd;
+$dark-grey-text:		#333;
+
+// navbar
+$nav-font-light-color:	#777;
+$nav-font-dark-color:	#333;
