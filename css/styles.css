@@ -459,9 +459,7 @@
 .message-bar {
   width: 100%;
   background-color: #333;
-  color: #ddd;
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
   height: 2.1rem;
   line-height: 1.9rem; }
   .message-bar .red-star {
@@ -472,7 +470,9 @@
     display: inline-block;
     vertical-align: sub;
     font-size: 1em;
-    letter-spacing: .02rem; }
+    letter-spacing: .02rem;
+    color: #ddd;
+    font-family: Arial, Helvetica, sans-serif; }
 
 nav {
   margin-top: 20px;
@@ -684,6 +684,45 @@ nav {
       .banner-area .slider-box {
         height: 166px; } }
 
+.collection .collection-header {
+  width: 100%;
+  text-align: center;
+  font-size: 1.4rem;
+  letter-spacing: .3rem; }
+
+.collection .card-collection {
+  margin-top: 10px;
+  overflow: auto; }
+  .collection .card-collection .card {
+    position: relative;
+    border: 1px solid #ddd;
+    -webkit-box-shadow: 0 2px 1px rgba(0,0,0,.175);
+    -moz-box-shadow: 0 2px 1px rgba(0,0,0,.175);
+    box-shadow: 0 2px 1px rgba(0,0,0,.175); }
+    .collection .card-collection .card .card-image {
+      background-color: #fff;
+      text-align: center;
+      padding: 5px;
+      cursor: pointer; }
+    .collection .card-collection .card .card-content {
+      padding: 5px;
+      background-color: #fff;
+      border-top: 1px solid #ddd; }
+      .collection .card-collection .card .card-content p {
+        font-size: .8rem; }
+        .collection .card-collection .card .card-content p a {
+          text-decoration: none;
+          color: #333; }
+          .collection .card-collection .card .card-content p a:hover {
+            color: #ec3440; }
+      .collection .card-collection .card .card-content .subtitle {
+        font-size: .7rem; }
+      .collection .card-collection .card .card-content .pricing {
+        float: right;
+        color: #f33535;
+        font-weight: 700;
+        font-size: .9rem; }
+
 @media only screen and (max-width: 767px) {
   .hide-sm, .hide-sm-down {
     display: none !important; } }
@@ -727,6 +766,7 @@ nav {
 body {
   background-color: #f8f8f8; }
 
-p {
+p, span {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  line-height: 1.42857143; }
+  line-height: 1.42857143;
+  color: #333; }

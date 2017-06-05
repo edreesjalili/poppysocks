@@ -1,9 +1,7 @@
 .message-bar {
 	width: 100%;
 	background-color: $grey-color;
-	color: $off-white-text;
 	text-align: center;
-	font-family: $default-font-family;
 	height: 2.1rem;
 	line-height: 1.9rem;
 
@@ -17,5 +15,7 @@
 		vertical-align: sub;
 		font-size: 1em;
 		letter-spacing: .02rem;
+		color: $off-white-text;
+		font-family: $default-font-family;
 	}
 }
