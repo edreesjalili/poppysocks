@@ -1,0 +1,195 @@
+.mobile-logo {
+	margin: 20px 0 -20px 0;
+}
+nav {
+	margin-top: 20px;
+	padding-left: $gutter-width;
+	padding-right: $gutter-width;
+	.nav-wrapper {
+		height: 54px;
+		font-family: $default-font-family;
+		border: 1px solid #ddd;
+		border-radius: 0;
+
+		@media #{$mq-small-down} {
+			border: none;
+		}
+
+		.nav-links.cg-col,
+		.nav-actions.cg-col {
+			padding: 0;
+		}
+		.nav-links {
+			height: 100%;
+			ul {
+				list-style: none;
+				height: 54px;
+				vertical-align: middle;
+				display: table-cell;
+				li {
+					display: inline-flex;
+					height: 100%;
+					a {
+						font-size: 16px;
+						color: $nav-font-light-color;
+						padding: 15px 10px;
+						text-decoration: none;
+						font-weight: bold;
+						&:hover {
+							color: $nav-font-dark-color;
+							background-color: #e7e7e7;
+						}
+					}
+					&.dropdown {
+						position: relative;
+						.dropdown-content {
+							@include box-shadow('0 6px 12px rgba(0,0,0,.175)');
+							display: none;
+							position: absolute;
+							background-color: #fff;
+							list-style: none;
+							float: left;
+							min-width: 160px;
+							padding: 5px 0;
+							margin: 2px 0 0;
+							font-size: 14px;
+							text-align: left;
+							border: 1px solid rgba(0, 0, 0, .15);
+							z-index: 999;
+							top: 50px;
+							left: -1px;
+							li {
+								display: block;
+								a {
+									font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+									display: block;
+									padding: 3px 20px;
+									clear: both;
+									font-weight: 400;
+									line-height: 1.42857143;
+									color: #333;
+									white-space: nowrap;
+									text-decoration: none;
+									&:hover {
+										color: #262626;
+										text-decoration: none;
+										background-color: #f5f5f5;
+									}
+								}
+							}
+							hr {
+								margin-top: 10px;
+								margin-bottom: 10px;
+								border: 0;
+								border-top: 1px solid #eee;
+							}
+						}
+						&:hover {
+							.dropdown-content {
+								display: block;
+							}
+						}
+					}
+				}
+			}
+		}
+		.nav-links-mobile {
+			height: 100%;
+			display: grid;
+			.nav-toggle {
+				font-size: 1.5rem;
+				width: 1.7em;
+				align-self: center;
+				background-color: #fff;
+				border: 1px solid #ddd;
+				cursor: pointer;
+				@include box-shadow('0 0 0 rgba(0,0,0,0)');
+			}
+		}
+		.nav-brand {
+			a {
+				position: relative;
+				display: block;
+				img.nav-logo {
+					position: absolute;
+					top: -.5em;
+					left: calc((100% - 405px)/2);
+					width: 405px;
+					margin: auto;
+					@media #{$mq-medium-down} {
+						width: 326px;
+						height: auto;
+						top: -1px;
+						left: -60px;
+					}
+				}
+			}
+		}
+		.nav-actions {
+			height: 100%;
+			position: relative;
+			.search-input-wrapper {
+				position: absolute;
+				width: calc(80% - #{$gutter-width});
+				right: calc(.7rem*2 + 40px);
+				top: 10px;
+
+				@media #{$mq-large-down} {
+					padding-left: 3em;
+				}
+				
+				@media #{$mq-medium-down} {
+					padding-left: 3.4em;
+				}
+
+				@media #{$mq-small-down} {
+					left: 0;
+					padding-left: 0;
+					padding-right: calc(16.66667% - #{$gutter-width} * 3 - 18px);
+					width: auto;
+				}
+
+				.search-input {
+					position: relative;
+					input {
+						width: 100%;
+						padding: 5px 25px 5px 5px;
+						background-color: #fff;
+						border: 1px solid #ccc;
+						height: 34px;
+						line-height: 1.42857143;
+						transition: border-color ease-in .15s, box-shadow ease-in-out .15s;
+						&:focus {
+							@include box-shadow('inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6)');
+							border-color: #66afe9;
+							outline: 0;
+						}
+					}
+					.search-icon {
+						position: absolute;
+						top: 7px;
+						right: 10px;
+					}
+				}
+			}
+			.cart-btn-wrapper {
+				position: absolute;
+				right: $gutter-width;
+				top: 18px;
+				.cart-btn {
+					border: 1px solid #ddd;
+					padding: 6px 12px;
+					color: $grey-color;
+					background-color: #fff;
+					&:hover {
+						background-color: #e6e6e6;
+						border-color: #adadad;
+					}
+					&:active {
+						@include box-shadow('inset 0 3px 5px rgba(0,0,0,.125)');
+					}
+				}
+			}
+		}
+	}
+}
