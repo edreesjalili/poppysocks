@@ -1,0 +1,63 @@
+// Hiders
+.hide-sm, .hide-sm-down {
+  @media #{$mq-small-down} {
+    display: none !important;
+  }
+}
+.hide-md-down {
+  @media #{$mq-medium-down} {
+    display: none !important;
+  }
+}
+.hide-lg-down {
+  @media #{$mq-large-down} {
+    display: none !important;
+  }
+}
+.hide-md-up {
+  @media #{$mq-medium-up} {
+    display: none !important;
+  }
+}
+.hide-lg-up {
+  @media #{$mq-large-up} {
+    display: none !important;
+  }
+}
+.hide-lg {
+  @media #{$mq-large-up} {
+    display: none !important;
+  }
+}
+.show-lg {
+  @media #{$mq-large-up} {
+    display: block !important;
+  }
+}
+.show-sm {
+  @media #{$mq-small-down} {
+    display: block !important;
+  }
+}
+.show-md-up {
+  @media #{$mq-medium-up} {
+    display: block !important;
+  }
+}
+.show-md-down {
+  @media #{$mq-medium-down} {
+    display: block !important;
+  }
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
