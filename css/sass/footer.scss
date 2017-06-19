@@ -16,6 +16,15 @@ footer {
 	h2 {
 		font-weight: 300;
 		font-size: 1.8rem;
+
+		@media #{$mq-medium-down} {
+			text-align: center;
+		}
+	}
+
+	p {
+		color: $off-white-text;
+		font-size: .9rem;
 	}
 
 	.email-signup-wrapper {
@@ -31,7 +40,7 @@ footer {
 			input {
 				width: calc(100% - 40px);
 				margin: 0;
-				padding: 5px 25px 5px 5px;
+				padding: 6px 12px;
 				background-color: #fff;
 				border: 1px solid #ccc;
 				height: 34px;
@@ -47,6 +56,7 @@ footer {
 			}
 
 			button[type="submit"] {
+				position: absolute;
 				margin: 0;
 				width: 40px;
 				padding: 6px 12px;
@@ -60,5 +70,29 @@ footer {
 		}
 	}
 
+	.bottom-nav-links {
+		
+		.cg-col {
+			padding: 0;
+		}
 
+		ul {
+			list-style: none;
+			margin-left: -10px;
+			margin-right: -10px;
+
+			li {
+				display: inline-block;
+
+				a {
+					text-decoration: none;
+					color: #777;
+					line-height: 20px;
+					display: block;
+					padding: 5px 15px;
+					font-size: 0.9rem;
+				}
+			}
+		}
+	}
 }

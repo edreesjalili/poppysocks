@@ -3,6 +3,7 @@
 @import "grid";
 @import "message-bar";
 @import "nav";
+@import "side-nav";
 @import "banner";
 @import "collection";
 @import "footer";
@@ -10,6 +11,7 @@
 
 body {
 	background-color: $primary-bg-color;
+	position: relative;
 }
 
 p, span {
